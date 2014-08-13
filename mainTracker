@@ -1,0 +1,14 @@
+print "Welcome to Final Fitness! \n You can choose one of the following:"
+print "[Dumbbell Lunge]",
+print "[Dumbbell Squat]",
+print "[Air Squat]"
+
+inp = raw_input("Enter your exercise: ").upper()
+
+
+points = 0
+if inp == "DUMBBELL LUNGE" :
+    points = points + 20
+    print inp, "Point Total: ", points
+else :
+    print "What?"
