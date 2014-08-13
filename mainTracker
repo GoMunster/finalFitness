@@ -3,14 +3,36 @@ print "[Dumbbell Lunge]",
 print "[Dumbbell Squat]",
 print "[Air Squat]"
 
-inp = raw_input("Enter your exercise: ").upper()
 
 
 points = 0
-
 inpYN = "Y"
 
+# Building a Player 
+
+class Player:
+    def __init__(self):
+        self.name = ""
+        self.age = 0
+        self.weight = 0
+        self.height = 0
+        
+p = Player()
+p.name = raw_input("What is your name? ")
+p.age = raw_input("What is your age? ")
+p.height = raw_input("How tall are you? ")
+p.weight = raw_input("How much do you weigh? Round to nearest lb. ")
+
+print p.name, p.age, p.height, p.weight
+
+# Calculating Points
+
+
+# Game Loop
 while inpYN == "Y" :
+
+    inp = raw_input("Enter your exercise: ").upper()
+
     if inp == "DUMBBELL LUNGE" :
         points = points + 20
         print inp, "Point Total: ", points
@@ -25,5 +47,8 @@ while inpYN == "Y" :
         points = points + 25
         print inp, "Points Total: ", points
         inpYN = "N"
+     
+    inpYN = raw_input("Would you like to add another exercise to today's workout? Y/N ").upper()
         
-inpYN = raw_input("Would you like to add another exercise to today's workout? Y/N ").upper()  
+  
+
