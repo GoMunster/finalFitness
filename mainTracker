@@ -7,8 +7,23 @@ inp = raw_input("Enter your exercise: ").upper()
 
 
 points = 0
-if inp == "DUMBBELL LUNGE" :
-    points = points + 20
-    print inp, "Point Total: ", points
-else :
-    print "What?"
+
+inpYN = "Y"
+
+while inpYN == "Y" :
+    if inp == "DUMBBELL LUNGE" :
+        points = points + 20
+        print inp, "Point Total: ", points
+        inpYN = "N"
+
+    if inp == "DUMBBELL SQUAT" :
+        points = points + 40
+        print inp, "Points Total: ", points
+        inpYN = "N"       
+        
+    if inp == "AIR SQUAT" :
+        points = points + 25
+        print inp, "Points Total: ", points
+        inpYN = "N"
+        
+inpYN = raw_input("Would you like to add another exercise to today's workout? Y/N ").upper()  
