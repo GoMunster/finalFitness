@@ -8,6 +8,8 @@ print "[Air Squat]"
 points = 0
 inpYN = "Y"
 
+ExIndex = [Dumbbell Lunge, Dumbbell Squat, Air Squat]
+
 # Building a Player 
 
 class Player:
@@ -17,10 +19,11 @@ class Player:
         self.weight = 0
         self.height = 0
         
+# Player Set Up - Setting up the player using User input        
 p = Player()
 p.name = raw_input("What is your name? ")
 p.age = raw_input("What is your age? ")
-p.height = raw_input("How tall are you? ")
+p.height = raw_input("How tall are you? Round to closest inches. ")
 p.weight = raw_input("How much do you weigh? Round to nearest lb. ")
 
 print p.name, p.age, p.height, p.weight
@@ -51,4 +54,3 @@ while inpYN == "Y" :
     inpYN = raw_input("Would you like to add another exercise to today's workout? Y/N ").upper()
         
   
-
